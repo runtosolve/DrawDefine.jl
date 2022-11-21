@@ -1,5 +1,7 @@
 module DrawDefine
 
+using Luxor
+
 
 function create_drawing(;drawing_width, drawing_height, filename, background_color, font_name)
 
