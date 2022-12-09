@@ -87,7 +87,11 @@ function add_section_title(;section_name, section_title_location, drawing_scale)
 	
 	fontface("Arial Regular") 
 	fontsize(10)
-	section_title = textbox(string("SCALE: ", floor(Int, drawing_scale/12), "\" = 1'-0\"", )  ,
+	# section_title = textbox(string("SCALE: ", floor(Int, drawing_scale/12), "\" = 1'-0\"", )  ,
+	# Luxor.Point(section_title[1], section_title[2] + textextents(section_name)[4] * 1.0),
+	# leading = 6, alignment=:center)
+
+	section_title = textbox(string("SCALE: ", drawing_scale)  ,
 	Luxor.Point(section_title[1], section_title[2] + textextents(section_name)[4] * 1.0),
 	leading = 6, alignment=:center)
 
